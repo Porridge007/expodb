@@ -4,6 +4,7 @@ type Expo struct {
 	Id int
 	Name string
 	Description string
+	Place string
 }
 
 type ExpoDetail struct {

@@ -3,7 +3,11 @@ package models
 type Product struct {
 	Id int	`json:"id"`
 	Name string `json:"goods"`
+	Space string `json:"space"`
 	Description string `json:"description"`
+	Pic1 string	`json:"pic1"`
+	Pic2 string `json:"pic2"`
+	Pic3 string `json:"pic3"`
 }
 
 type ProductDetail struct {
