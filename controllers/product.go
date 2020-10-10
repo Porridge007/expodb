@@ -23,9 +23,19 @@ func  ( c *ProductListController) Get(){
 
 	products := make([]models.Product,0)
 	qs.All(&products)
+	resp := make([]models.ProductResp,0)
+	for _,v := range products{
+		var product models.ProductResp
+		product.Id = v.Id
+		product.Name = v.Name
+		product.Description = v.Description
+		product.Space =v.Space
+		product.Pics = append(product.Pics, v.Pic1, v.Pic2, v.Pic3)
+		resp = append(resp, product)
+	}
 	ret := models.ProductListResp{
 		Code:0,
-		Data:products,
+		Data:resp,
 	}
 	c.Data["json"] = &ret
 	c.ServeJSON()

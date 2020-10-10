@@ -3,7 +3,7 @@ package models
 
 type ProductListResp struct {
 	Code int	`json:"error_code"`
-	Data 	[]Product
+	Data 	[]ProductResp
 }
 
 type ProductDetailResp struct {

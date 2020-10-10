@@ -22,3 +22,11 @@ type ProductDetail struct {
 	Pic2 string
 	Pic3 string
 }
+
+type ProductResp struct {
+	Id int	`json:"id"`
+	Name string `json:"goods"`
+	Space string `json:"space"`
+	Description string `json:"description"`
+	Pics []string	`json:"pics"`
+}

@@ -10,7 +10,7 @@ import (
 )
 
 func init(){
-	orm.RegisterDataBase("default", "mysql", "root:123456!@tcp(127.0.0.1:3306)/expo?charset=utf8&loc=Asia%2FShanghai", 30)
+	orm.RegisterDataBase("default", "mysql", "root:123456@tcp(127.0.0.1:3306)/expo?charset=utf8&loc=Asia%2FShanghai", 30)
 	orm.RegisterModel(new(models.Product))
 	orm.RegisterModel(new(models.ProductDetail))
 	orm.RegisterModel(new(models.Expo))
