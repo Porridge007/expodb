@@ -30,3 +30,14 @@ type ProductResp struct {
 	Description string `json:"description"`
 	Pics []string	`json:"pics"`
 }
+
+type ProductDetailRet struct {
+	Id int
+	Name string
+	Space string
+	Product string
+	ProductEnglish string
+	Description string
+	DescriptionEnglish string
+	Pics []string
+}

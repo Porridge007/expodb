@@ -47,10 +47,19 @@ func (c *ProductDetailController) Get(){
 
 	product :=models.ProductDetail{Id:id}
 	o.Read(&product)
-	ret := models.ProductDetailResp{
+	var detail models.ProductDetailRet
+	detail.Id = product.Id
+	detail.Name = product.Name
+	detail.Space = product.Space
+	detail.Product = product.Product
+	detail.ProductEnglish = product.ProductEnglish
+	detail.Description = product.Description
+	detail.DescriptionEnglish = product.DescriptionEnglish
+	detail.Pics = append(detail.Pics, product.Pic1, product.Pic2, product.Pic3 )
+	resp :=  models.ProductDetailResp{
 		Code:0,
-		Data: product,
+		Data: detail,
 	}
-	c.Data["json"] = ret
+	c.Data["json"] = &resp
 	c.ServeJSON()
 }

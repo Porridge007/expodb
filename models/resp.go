@@ -8,7 +8,7 @@ type ProductListResp struct {
 
 type ProductDetailResp struct {
 	Code int	`json:"erorr_code"`
-	Data ProductDetail
+	Data ProductDetailRet
 }
 
 type ExpoListResp struct {
