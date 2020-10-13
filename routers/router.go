@@ -14,6 +14,7 @@ import (
 )
 
 func init() {
+	beego.Router("/",&controllers.IndexController{})
 	beego.Router("api/goods/list", &controllers.ProductListController{})
 	beego.Router("api/goods/:id", &controllers.ProductDetailController{})
 
